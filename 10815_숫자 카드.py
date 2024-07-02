@@ -1,15 +1,11 @@
 import sys
 input = sys.stdin.readline
-
 n = int(input())
-cards_n = list(map(int,input().split()))
+nlist = set(map(int, input().split()))
 m = int(input())
-cards_m = list(map(int,input().split()))
-
-res = [0] * m
-
-for i in range(m):
-    if cards_m[i] in cards_n:
-        res[i] += 1
-
-print(*res)
+mlist = list(map(int, input().split()))
+for i in mlist:
+    if i in nlist: 
+        print(1, end = ' ')
+    else:
+        print(0, end = ' ')
